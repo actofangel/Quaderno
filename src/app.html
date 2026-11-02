@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" data-tone="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quaderno</title>
+<link rel="icon" href="icons/32.png">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<canvas id="sky"></canvas><canvas id="fx"></canvas>
+<div id="app" data-pane="list">
+ <aside id="side">
+  <div class="brand"><button class="logo" id="b-tone" title="Switch light and dark" aria-label="Switch light and dark"></button><div class="gilt"></div></div>
+  <div class="doms" id="doms"></div>
+  <div class="sscroll">
+   <div class="outside" id="outside" hidden></div>
+   <nav id="nav"></nav>
+   <div class="shead"><span class="lab">Folders</span><button class="ib" id="b-newdir" title="New folder"></button></div>
+   <div class="tree" id="folders"></div>
+   <div class="shead"><span class="lab">Tags</span></div>
+   <div class="tree" id="tags"></div>
+  </div>
+  <div id="quick"><span class="lab">Capture</span><div class="qrow"><button class="btn sm" id="b-qnew" title="New note (Ctrl/Cmd+N)" aria-label="New note">Note</button><button class="btn sm" id="b-idea" title="Jot down an idea in Ideas (Ctrl/Cmd+Shift+I)" aria-label="New idea">Idea</button><button class="btn sm" id="b-pscrap" title="Create a new scrap from the clipboard" aria-label="Scrap from clipboard">Scrap</button></div></div>
+  <div id="sfoot"><canvas id="mini" width="68" height="68"></canvas><div id="minitxt"></div><button class="ib" id="b-set" title="Settings"></button></div>
+ </aside>
+ <section id="list">
+  <div class="lhead"><button class="ib only-narrow" id="b-side"></button><h2 id="ltitle">Notes</h2><button class="ib" id="b-new" title="New note (Ctrl/Cmd+N)"></button></div>
+  <div class="lsearch"><span id="qi"></span><input id="q" placeholder="Search" autocomplete="off" spellcheck="false"></div>
+  <div id="lchips" class="chips" hidden></div>
+  <div class="lsub"><span id="lcount"></span><select id="sort"><option value="mtime">Modified</option><option value="ctime">Created</option><option value="title">Title</option></select></div>
+  <div id="items"></div>
+ </section>
+ <main id="main">
+  <div class="pane" id="p-note" hidden>
+   <div class="nhead">
+    <button class="ib only-narrow" id="b-back"></button>
+    <div class="crumb" id="crumb"></div><span class="save" id="savest"></span>
+    <button class="ib" id="b-mode" title="Read / Edit (Ctrl/Cmd+E)"></button>
+    <button class="ib" id="b-stamp" title="Insert sky stamp"></button>
+    <button class="ib" id="b-img" title="Insert image"></button>
+    <button class="ib" id="b-proj" title="Add to a project"></button><button class="ib" id="b-undo" title="Undo (Ctrl/Cmd Z)"></button><button class="ib" id="b-redo" title="Redo (Ctrl/Cmd Shift Z)"></button><button class="ib" id="b-newabout" hidden title="New note about this item"></button><button class="ib cnt" id="b-about" hidden title="Notes about this item"></button><button class="ib" id="b-promote" hidden title="Move this idea into the working notes"></button><button class="ib" id="b-pin" title="Pin"></button>
+    <button class="ib" id="b-arch" title="Archive"></button>
+    <button class="ib" id="b-more" title="More"></button>
+    <button class="ib" id="b-focus" title="Focus (Ctrl/Cmd+\)"></button>
+    <button class="ib" id="b-drawer" title="Sky, outline and links"></button>
+   </div>
+   <div id="scroller"><article id="sheet"><div id="peek" class="peek" hidden></div><div id="srcbar" hidden></div><div id="igal" hidden></div><div id="edwrap"><div id="mirror" class="ed"></div><textarea id="ta" class="ed" spellcheck="false" autocapitalize="sentences"></textarea><div id="measure" class="ed"></div></div><div id="read" class="md"></div></article></div>
+   <div class="nfoot" id="nfoot"></div>
+  </div>
+  <div class="pane" id="p-view" hidden><div class="nhead"><button class="ib only-narrow" id="b-back2"></button><div class="crumb" id="vcrumb"></div><button class="ib" id="b-drawer2" title="Sky, outline and links"></button></div><div class="view" id="view"></div></div>
+  <div class="pane" id="p-blank"><div class="nhead"><button class="ib only-narrow" id="b-back3"></button><div class="crumb"></div><button class="ib" id="b-drawer3" title="Sky, outline and links"></button></div><div class="blank"><div class="fig"></div><h3>Quaderno</h3><p>Select a note, or start a new one with Ctrl/Cmd+N. Ctrl/Cmd+K jumps to any note.</p></div></div>
+ </main>
+ <aside id="drawer"><div class="dtabs" id="dtabs"></div><div id="dbody"></div></aside>
+</div>
+<div id="pop"></div><div id="menu"></div><div id="modal"></div>
+<div id="lb"><img alt=""><div class="bar2"></div></div>
+<div id="drop">Drop to add</div><div id="toast"></div>
+<input type="file" id="f-img" accept="image/*" multiple hidden>
+<input type="file" id="f-files" multiple hidden>
+<input type="file" id="f-dir" webkitdirectory multiple hidden>
+<script src="app.js"></script>
+</body>
+</html>
