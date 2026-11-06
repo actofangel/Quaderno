@@ -105,4 +105,11 @@ The `<script>` and `<style>` in `dist/Quaderno.html` are identical to `src/app.j
 
 - `src/app.js` and `src/app.css` are minified; the original source is not yet in the repository.
 - There is no build step yet for producing the single-file build from the split build.
-- No license has been chosen.
+
+## License
+
+Quaderno is licensed under the [PolyForm Strict License 1.0.0](LICENSE). You may use it for noncommercial purposes such as personal research, study and education. Making changes to it, distributing it, and any commercial use are not permitted.
+
+For any other use, including collaboration, adaptation or commercial licensing, please contact the author first by opening an issue on this repository or by writing to actofangel@gmail.com.
+
+Copyright (c) 2026 actofangel
